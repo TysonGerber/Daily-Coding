@@ -99,6 +99,18 @@ console.log(y)
  var x = 1
 console.log(x)
 
+y=2
+
+
+ function getX(){
+    return y=1
+ }
+
+ var x = 1
+console.log(x)
+console.log(y)
+console.log(getX())
+
 
 
 
@@ -125,3 +137,54 @@ var getX = function(){
  console.log(getX()) //Becomes undefined because x is not defined before we call it.
 
 var x = 1  
+
+
+
+
+
+
+
+
+
+
+var foo = 1;
+
+function bar() {
+	if (!foo) {
+		var foo = 10;
+	}
+	console.log('foo', foo);
+}
+console.log('function', bar());
+
+ 
+foo:1
+function bar ===== foo:10
+                    console.log(foo)
+
+console.log
+
+
+var x = 1;
+console.log(x); 
+
+if (true) {
+	var x = 2;
+	console.log(x); 
+}
+console.log(x);
+
+
+
+
+// This is a good example of how JavaScript is Asynchronys.
+
+var x = 1;
+console.log('One', x); 
+
+function y() {
+	var x = 2;
+	console.log('Two', x); 
+}
+console.log('Three', x);
+console.log('Four', y());
