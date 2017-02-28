@@ -89,3 +89,9 @@ function f() {
 }
 f();
 console.log(x);
+
+
+
+
+
+
