@@ -12,17 +12,7 @@ var times2 = ages.forEach(function(element){
 
 
 
-var arr = [1,2,3]
 
-
-function times(num){
-r = []
-for(var i = 0; i < num.length; i++){
-   r.push(num[i] * 2)
-}
-return r
-}
-console.log(times(arr))
 
 
 console.log([1,2,3].reduce(function(a,b){return a*b;}));

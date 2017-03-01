@@ -57,16 +57,53 @@ console.log(count())
 
 
 
+
+
+
+
+// Take the array 1,2,3 and times it by 2
+
+var arr = [1,2,3]
+
+
+function times(num){
+r = []
+for(var i = 0; i < num.length; i++){
+   r.push(num[i] * 2)
+}
+return r
+}
+console.log(times(arr))
+
+
+
+
+// *******************************
+// HELLO WORLD EXAMPLE: DORLD OLLEH
+// *******************************
+
+// Take this string and iterate through it backwards so it says 'dlrow olleh'
+string = 'Hello World'
+
+var backwards = string.split('').reverse().join('')
+
+console.log(backwards)
+
+
 // Take this string and iterate through it backwards so it says 'dlrow olleh'
 string = 'Hello World'
 
 var arr = string.split('')
 // console.log(arr) [ 'H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd' ]
-for(var i = arr.length-1; i < arr.length; i--){
-    console.log(arr[i])
-}
+
+    var backwards = [];
+    for(var i=arr.length-1; i >= 0; i--){
+        backwards.push(arr[i])
+    }
+
+console.log(backwards)
 
 
-string.forEach(function(element){
-    console.log(element[])
-})
+
+
+
