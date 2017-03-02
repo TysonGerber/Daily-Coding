@@ -9,16 +9,25 @@
        1. arr.toString()
  
 
-            fordFocus = new Car("Ford", "Focus", "Blue", "Regular Unleaded", "80 mph", "2002");
+            function Car(brand, name, color, fuel, speed, year ) {
+              this.name = name;
+              this.brand = brand;
+              this.color = color;
+              this.fuel = fuel;
+              this.speed = speed;
+              this.year = year;
+            }
+
+            fordFocus = new Car("Ford", "Focus", "Blue", "Regular Unleaded", "80 mph", 2002);
 
             Car.prototype.toString = function carToString(){
               return " This is a " + this.color + " " + this.brand + " " + this.name + ". " + " It's reveal date was " + this.year + ", " + " it's max speed is " + this.speed + " and takes " + this.fuel + " fuel."
             }
-            console.log(fordFocus.toString()) //This is a Blue Ford Focus.  It's reveal date was 2002,  it's max speed is 80 mph and takes Regular Unleaded fuel.
+            //console.log(fordFocus.toString()) //This is a Blue Ford Focus.  It's reveal date was 2002,  it's max speed is 80 mph and takes Regular Unleaded fuel.
             console.log(fordFocus+" ") // same
 
             // fordFocus is an object and you want to use it as an object, but if you want to print out the STRING (toString() output) rather than the OBJECT ({name:…, brand:…}) you need to use it as a string.  By adding a string to the object, it implicitly converts the object into the string using toString().
-            // console.log(fordFocus) outputs the object.
+            //console.log(fordFocus) // outputs the object.
             // console.log(fordFocus + “ “) outputs the string (and calls toString() to do that)
             
        2. arr.join() //The join() method joins all elements of an array (or an array-like object) into a string.

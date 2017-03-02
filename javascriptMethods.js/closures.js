@@ -80,7 +80,7 @@ getDogs(); // the private scope of the outer function lives on and remains in th
 
 
 
-
+// EXAMPLE OF CLOSURE
 function outerFunction() {
     var someCount = 0;
     function innerFunction() {
@@ -97,6 +97,7 @@ counter2(); // Called 1 times
 
 
 
+// REAL WORLD EXAMPLE THAT WE CAME UP WITH.
 function usersLocation(ipAddressLocation) {
     var user = 0;
     function userCount() {
