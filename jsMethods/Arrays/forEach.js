@@ -19,7 +19,10 @@ console.log([1,2,3].reduce(function(a,b){return a*b;}));
 
 var arr = [1,2,3]
 
+
+
 arr.forEach(function(element) {
   element = element * 2
  console.log(element)
 });
+

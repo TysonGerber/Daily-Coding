@@ -67,29 +67,149 @@
        		 var combine = ["H", "e", "l", "l", "o", " ", "A", "l", "e", "x", " ", "a", "n", "d", " ", "C", "h", "a", "r", "l", "i", "e"]
          	 	console.log(combine.length) // (0-22 includes spaces as an index.) 22     
 
-delete arr[0]
-//will delete the item at the specified index of the array
+       8. delete arr[0] 
+            // will delete the item at the specified index of the array
 
-arr.splice(2,0,'red','green')
-//will insert the corresponding strings into the given indecies of the array
+              var thisArray = ["The", "word", "ME", "will", "be", "deleted"]
+                delete thisArray[2]
+                console.log(thisArray) //[ 'The', 'word', undefined, 'will', 'be', 'deleted' ]
 
-arr.splice(2,0)
-//removes the items in the given indecies of the array
+            //## What is the difference between using the delete operator on the array element as opposed to using the Array.splice method?
+            //delete will delete the object property, but will not reindex the array or update its length. This makes it appears as if it is undefined:
 
-arr1.concat(arr2)
-//will concatenate  arrays
+              myArray = ['a', 'b', 'c', 'd'] // ["a", "b", "c", "d"]
+                delete myArray[0] // true
+                console.log(myArray)//[undefined, "b", "c", "d"]
 
-newArr = oldArr.slice(3)
-//create a new array based on slice point of the old array
+       9. arr.splice(2,0)
+          //removes the items in the given indecies of the array
+            
+            
+            //Splice(start, deleteCount) actually removes the element from the array:
 
-map()
-
-forEach()
-
-
+              myArray = ['a', 'b', 'c', 'd'] // ["a", "b", "c", "d"]
+                myArray.splice(0, 2) // ["a", "b"]
+                console.log(myArray) // ["c", "d"]
 
 
+              var thisArray = ["The", "word", "ME", "will", "be", "deleted"]
+                thisArray.splice(2,1)
+                console.log(thisArray) //[ 'The', 'word', 'will', 'be', 'deleted' ] //ME was deleted
 
+
+
+     10. arr.splice(2,0,'red','green')
+          //will insert the corresponding strings into the given indecies of the array
+
+              var thisArray = ["The", "word", "ME", "will", "be", "deleted"]
+                thisArray.splice(1,4,"code","that", "was", "here", "was")
+                console.log(thisArray) // [ 'The', 'code', 'that', 'was', 'here', 'was', 'deleted' ]
+
+    11. arr.concat(arr2)
+      //Joins two or more arrays, and returns a copy of the joined arrays
+            
+            var one = ["Hi", "my", "name", "is","Tyson"]
+            var two = ["Gerber", "nice", "to", "concat", "with", "you", "."]
+            
+
+             console.log(one.concat(two)) //[ 'Hi','my','name','is', 'Tyson', 'Gerber', 'nice', 'to', 'concat', 'with', 'you', '.' ]
+            console.log(one.concat(two).join(' ')) //Hi my name is Tyson Gerber nice to concat with you .
+            
+            
+            
+            var numbers = [1,2,3,4]
+            var letters = ["number","number","number","number"]
+
+            // console.log(letters.concat(numbers)) //[ 'number', 'number', 'number', 'number', 1, 2, 3, 4 ]
+
+            function num(numbers, letters){
+              for(var i = 0; i < letters.length; i++){
+                  console.log(letters)
+                for(var i = 0; i< num.length; i++)
+                console.log(num)
+              }
+              return numbers
+            }
+
+            console.log(num(numbers, letters))
+
+    12. newArr = oldArr.slice(3)
+      //create a new array based on slice point of the old array
+
+    13. arr.copyWithin()
+      // Copies array elements within the array, to and from specified positions
+
+    14. arr.every()	
+     // Checks if every element in an array pass a test
+
+    15. arr.fill()	
+      // Fill the elements in an array with a static value
+
+    16. arr.filter()	
+      // Creates a new array with every element in an array that pass a test
+
+    17. arr.find()
+      // Returns the value of the first element in an array that pass a test
+
+    18. arr.findIndex()	
+      // Returns the index of the first element in an array that pass a test
+
+    19. arr.lastIndexOf()	
+      // Search the array for an element, starting at the end, and returns its position
+
+    20. arr.forEach()	
+      // Calls a function for each array element
+
+animals = ['tiger', 'lion', 'bear']
+
+animals.forEach(function(element){
+    element = element + ' I am scared' 
+    console.log(element)
+})
+
+
+
+animals = ['tiger', 'lion', 'bear']
+
+console.log(animals.map(function(element){
+    element = element + ' I am scared' 
+    return element
+}))
+
+
+
+arr.indexOf()	
+// Search the array for an element and returns its position
+
+arr.isArray()	
+// Checks whether an object is an array
+
+arr.map()	
+// Creates a new array with the result of calling a function for each array element
+
+arr.reduce()	
+// Reduce the values of an array to a single value (going left-to-right)
+
+arr.reduceRight()	
+// Reduce the values of an array to a single value (going right-to-left)
+
+arr.reverse()	
+// Reverses the order of the elements in an array
+
+arr.slice()	
+// Selects a part of an array, and returns the new array
+
+arr.some()	
+//Checks if any of the elements in an array pass a test
+
+arr.sort()	
+// Sorts the elements of an array
+
+arr.splice()	
+// Adds/Removes elements from an array
+
+arr.valueOf()	
+// Returns the primitive value of an array
 
 
 
@@ -142,3 +262,26 @@ forEach()
   console.log(arr); //after all this. arr ends up as arr = ["35", "minutes", "to", "Pine"]
 
 // =======================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+var sophia = ['Passionate', 'Friendly', 'Fun', 'A Leader']
+             for(var i = 0; i < sophia.length; i++){
+                  console.log("Sophia is " + sophia[i])
+}
+
+ var sophia = ['Passionate', 'Friendly', 'Fun', 'A Leader', 'The best future Web Developer EVER!!!!']
+
+             for(var i = 0; i < sophia.length; i++){
+                  console.log("Sophia is " + sophia[i])
+}

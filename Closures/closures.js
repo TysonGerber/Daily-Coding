@@ -7,6 +7,10 @@
 
 // References:  https://teamtreehouse.com/library/the-problem-with-globals
 //              http://speakingjs.com/es5/ch16.html#inadvertently_sharing_environments
+//              http://javascriptissexy.com/understand-javascript-closures-with-ease/
+//              https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
+//              https://www.youtube.com/watch?v=yiEeiMN2Khs
+//              https://www.youtube.com/watch?v=CQqwU2Ixu-U
 
 
 //    This is why we have closures. Below is not a closure but shows the need of why we need them!
