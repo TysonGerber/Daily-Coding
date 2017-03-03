@@ -292,3 +292,66 @@ arr.forEach(function(element) {
 });
 
 
+
+
+  function foo(){
+   var bar = "hello"
+	function fooValue(){
+    	return bar
+    }
+  return fooValue;
+  }
+  var foo1 = foo()
+  var foo2 = foo()
+
+
+//http://www.logicguns.com/q/what-is-a-potential-pitfall-with-using-typeof-bar-objectto-determine-if-baris-an-object-how-can-this-pitfall-be-avoided/5625c8222b78726726a8e10a/
+  
+function foo1()
+{
+  return {
+      bar: "hello"
+  };
+}
+
+function foo2()
+{
+  return
+  {
+      bar: "hello"
+  };
+
+}
+console.log(foo1());
+console.log(foo2());
+
+var name = null;
+var name2 = undefined;
+
+console.log(typeof name == "object")
+console.log(typeof name2 == "object")
+
+
+
+
+
+
+  
+function foo1()
+{
+  return {
+      bar: "hello"
+  };
+
+}
+
+function foo2()
+{
+  return {
+      bar: "hello"
+  };
+
+}
+  
+console.log(foo1()); //
+console.log(foo2());

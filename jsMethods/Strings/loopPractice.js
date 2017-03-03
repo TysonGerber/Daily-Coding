@@ -106,4 +106,20 @@ console.log(backwards)
 
 
 
+// SECONDS, DAYS, HOURS, DAYS.
 
+//NESTED FOR LOOP EXAMPLE
+function dayClock(){
+for (var d = 0; d < 31; d++) { // days
+  for (var h = 0; h < 24; h++) {
+    console.log("hours" + h) // hours
+    for (var m = 0; m < 60; m++) {
+      console.log("minute" + m)// minutes
+      for (var s = 0; s < 60; s++) {
+        console.log('seconds' + s)   //seconds
+      }
+    }
+  }
+}
+}
+console.log(dayClock())
