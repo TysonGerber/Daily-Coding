@@ -137,61 +137,99 @@ console.log(one.slice(4))
 // Copies array elements within the array, to and from specified positions
 var one = ["Hi", "my", "name", "is", "Tyson"]
 console.log(one.copyWithin(1, 1))
+console.log(one.copyWithin(0,1))
+console.log(one.copyWithin(0,2))
 
 [1, 2, 3, 4, 5].copyWithin(0, 3);
 // [4, 5, 3, 4, 5]
 
 14. arr.every()
 // Checks if every element in an array pass a test
-console.log([-10, 0, 10].every(x => x < 0) === false);
-console.log([-10, 0, 10].every(x => x < 0) === false);
-console.log([1, 2, 3, 4].every(x => x < 0) === false);
-console.log([1, 2, 3, 4].every(x => x >= 0) === true);
 
-
-
-
-
-function isNegative(x) {
-    return x < 0;
-}
-
-// console.log(assert([-10, 0, 10].some(isNegative) === true));
-// console.log(assert([1, 2, 3, 4].some(isNegative) === false));
-
-
-console.log([-10, 0, 10].some(x => x < 0) === true);
-console.log([1, 2, 3, 4].some(x => x < 0) === false);
-
+console.log([-10, 0, 10].every(x => x < 0)) //false
+console.log([-10, 0, 10].every(x => x < 0)) //false
+console.log([1, 2, 3, 4].every(x => x < 0))  //false
+console.log([1, 2, 3, 4].every(x => x >= 0))  //true
 
 15. arr.fill()
 // Fill the elements in an array with a static value
+var one = ["Hi", "my", "name", "is", "Tyson"]
+console.log(one.fill(1))
+var one = ["Hi", "my", "name", "is", "Tyson"]
+console.log(one.fill(1, 1))
+var one = ["Hi", "my", "name", "is", "Tyson"]
+console.log(one.fill(0,1))
+var one = ["Hi", "my", "name", "is", "Tyson"]
+console.log(one.fill(0,2))
+var one = ["Hi", "my", "name", "is", "Tyson"]
+console.log(one.fill(0,3))
+var one = ["Hi", "my", "name", "is", "Tyson"]
+console.log(one.fill("Alex",4))
+var one = ["Hi", "my", "name", "is", "Tyson"]
+console.log(one.fill("Alex",2, 3))
+
 
 16. arr.filter()
 // Creates a new array with every element in an array that pass a test
 
+var people = ["Tyson", "Charlie", "Alex", "Tom", "Sara", "Tom", "Paul"]
+
+function findName(names) {
+  if (names.length === 4) { // find all the names with the length of 4 and return the array with those names.
+    return names
+  }
+}
+console.log(people.filter(findName)) // Alex, Sara, Paul
+
+
 17. arr.find()
 // Returns the value of the first element in an array that pass a test
+
+var people = ["Tyson", "Charlie", "Alex", "Tom", "Sara", "Tom", "Paul"]
+
+function findName(names) {
+  if (names.length === 4) { // find the first name with the length of 4.
+    return names
+  }
+}
+console.log(people.find(findName)) // Alex
+
 
 18. arr.findIndex()
 // Returns the index of the first element in an array that pass a test
 
+var people = ["Tyson", "Charlie", "Alex", "Tom", "Travis", "Tom"]
+
+function findName(names) {
+  if (names === "Tom") {
+    return names
+  }
+}
+console.log(people.findIndex(findName)) // 3   [3] The array where the equation passes.
+
+
+console.log([6, -5, 8].findIndex(x => x < 0)) //1
+console.log([6, 5, 8].findIndex(x => x < 0)) // -1 If what your testing doesn't exist then it will return -1
+
+
+
+
 19. arr.lastIndexOf()
 // Search the array for an element, starting at the end, and returns its position
+
+var another = ["Test", "One", "Two", "Three", "Test", "One", "Two", "Three",]
+console.log(another.lastIndexOf("One")); // 5  index[5]
+
 
 20. arr.forEach()
 // Calls a function for each array element
 
-  animals = ['tigers', 'lions', 'bears']
+animals = ['tigers', 'lions', 'bears']
 
-  animals.forEach(function (element) {
-    element = element + ' I am scared'
-    console.log(element)
-  })
-
-
-
-
+animals.forEach(function (element) {
+  element = element + ' I am scared'
+  console.log(element)
+})
 
 
 arr.indexOf()
@@ -202,12 +240,12 @@ arr.isArray()
 
 arr.map()
 // Creates a new array with the result of calling a function for each array element
-    animals = ['tiger', 'lion', 'bear']
+animals = ['tiger', 'lion', 'bear']
 
-    console.log(animals.map(function (element) {
-      element = element + ' I am scared'
-      return element
-    }))
+console.log(animals.map(function (element) {
+  element = element + ' I am scared'
+  return element
+}))
 
 arr.reduce()
 // Reduce the values of an array to a single value (going left-to-right)
@@ -319,3 +357,14 @@ for (var i = 0; i < sophia.length; i++) {
 
  // Symetric
   // encrypt and decrypt with the same key.  If I cut you in half your one half is exactly the same and the other half.
+
+
+var animals = ["dog", "cat", "bird"]
+
+console.log(animals.copyWithin(0, 1))
+
+high preformance method to shift values in an array.
+
+target of where your going to be copying 
+
+1 - 2 go to two. 2 is exclusive so your only looking at car 
