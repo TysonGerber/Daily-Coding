@@ -129,9 +129,17 @@ for (var i = 0; i < numbers.length; i++) {
 
 12. newArr = oldArr.slice(3)
 //create a new array based on slice point of the old array
+var one = ["Hi", "my", "name", "is", "Tyson"]
+console.log(one.slice(4))
+
 
 13. arr.copyWithin()
 // Copies array elements within the array, to and from specified positions
+var one = ["Hi", "my", "name", "is", "Tyson"]
+console.log(one.copyWithin(1, 1))
+
+[1, 2, 3, 4, 5].copyWithin(0, 3);
+// [4, 5, 3, 4, 5]
 
 14. arr.every()
 // Checks if every element in an array pass a test
@@ -154,7 +162,7 @@ for (var i = 0; i < numbers.length; i++) {
 20. arr.forEach()
 // Calls a function for each array element
 
-animals = ['tiger', 'lion', 'bear']
+animals = ['tigers', 'lions', 'bears']
 
 animals.forEach(function (element) {
   element = element + ' I am scared'

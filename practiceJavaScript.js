@@ -1,71 +1,5 @@
 
 
-
-// This is a good example of how JavaScript is Asynchronys.
-
-var x = 1;
-console.log('One', x); 
-
-function y() {
-	var x = 2;
-	console.log('Two', x); 
-}
-console.log('Three', x);
-console.log('Four', y());
-
-
-
-
-var x = 1;
-console.log('One', x); 
-
-function y() {
-	var x = 2;
-    return x
-	console.log('Two', x); 
-}
-console.log('Three', x);
-console.log('Four', y());
-
-
-
-
-
-
-
-
-
-
-
-  
-  //JSON Object
-  "person": { // result from a patch request
- 	"name": "Tyson",
-    "age": 34,
-    "married": true
-}
-
-//JSONparse() We use if we get data back from an api that is a JSON Object, and we need it to becom Javascript Object. we use JSONparse() converts from above example to the example below.
-
-  // Javascript Object
-  var person = {
-  	name: "Tyson",
-    age: 32,
-    married: true
-  }
-  
-  
- // JSON Object like the first one above
-  JSON.parse(person) // Javascript Object like the second one above
-
-  
-
-
-
-
-
-
-
 function repeatify(string, number){
     for(var i = 0; i < number; i++){
         string += string
@@ -127,3 +61,14 @@ arr.forEach(function(element) {
   }
   var foo1 = foo()
   var foo2 = foo()
+
+
+
+function repeatify(name, num){
+    for(var i = 0; i < num; i++){
+      
+    }
+    return i
+}
+
+  console.log(repeatify("hello", 3));
