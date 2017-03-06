@@ -143,6 +143,26 @@ console.log(one.copyWithin(1, 1))
 
 14. arr.every()
 // Checks if every element in an array pass a test
+console.log([-10, 0, 10].every(x => x < 0) === false);
+console.log([-10, 0, 10].every(x => x < 0) === false);
+console.log([1, 2, 3, 4].every(x => x < 0) === false);
+console.log([1, 2, 3, 4].every(x => x >= 0) === true);
+
+
+
+
+
+function isNegative(x) {
+    return x < 0;
+}
+
+// console.log(assert([-10, 0, 10].some(isNegative) === true));
+// console.log(assert([1, 2, 3, 4].some(isNegative) === false));
+
+
+console.log([-10, 0, 10].some(x => x < 0) === true);
+console.log([1, 2, 3, 4].some(x => x < 0) === false);
+
 
 15. arr.fill()
 // Fill the elements in an array with a static value
@@ -162,21 +182,15 @@ console.log(one.copyWithin(1, 1))
 20. arr.forEach()
 // Calls a function for each array element
 
-animals = ['tigers', 'lions', 'bears']
+  animals = ['tigers', 'lions', 'bears']
 
-animals.forEach(function (element) {
-  element = element + ' I am scared'
-  console.log(element)
-})
+  animals.forEach(function (element) {
+    element = element + ' I am scared'
+    console.log(element)
+  })
 
 
 
-animals = ['tiger', 'lion', 'bear']
-
-console.log(animals.map(function (element) {
-  element = element + ' I am scared'
-  return element
-}))
 
 
 
@@ -188,6 +202,12 @@ arr.isArray()
 
 arr.map()
 // Creates a new array with the result of calling a function for each array element
+    animals = ['tiger', 'lion', 'bear']
+
+    console.log(animals.map(function (element) {
+      element = element + ' I am scared'
+      return element
+    }))
 
 arr.reduce()
 // Reduce the values of an array to a single value (going left-to-right)
@@ -287,3 +307,15 @@ var sophia = ['Passionate', 'Friendly', 'Fun', 'A Leader', 'The best future Web 
 for (var i = 0; i < sophia.length; i++) {
   console.log("Sophia is " + sophia[i])
 }
+
+
+
+// if given a specific number in seconds I want the computer to translate it into days hours minutes and seconds. modular division
+
+&& || -- ++ % 
+
+// Asymetric 
+ // everyone has keys encrytped with one key and decrypted with another key.
+
+ // Symetric
+  // encrypt and decrypt with the same key.  If I cut you in half your one half is exactly the same and the other half.
