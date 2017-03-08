@@ -417,3 +417,34 @@ a(25)
 
 
 
+var num = [1,2,3,4,5,6]
+
+  function count(numbers){
+    countArray = [];
+    for(var i = 0; i < numbers.length; i++){
+      countArray.push(numbers[i])
+  }
+  return countArray
+}
+
+console.log(count(num));
+
+
+
+var numbers = [1,2,3,4,5]
+
+for(var i = 0; i < numbers.length; i++){
+  console.log(numbers[i])
+}
+
+
+var numbers = [1,2,3,4,5]
+
+function timesTwo(nums){
+  var newArr = [];
+  for(var i = 0; i < nums.length; i++){
+    newArr.push(nums[i])
+  }
+  return newArr
+}
+console.log(timesTwo(numbers))

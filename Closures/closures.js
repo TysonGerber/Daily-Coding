@@ -57,6 +57,7 @@ function dogHouse() {
 console.log(birds); //3
 console.log(dogs); // undefined
 
+
 function outer() {
     var countDogs = 0
     function inner() {
@@ -106,7 +107,7 @@ function usersLocation(ipAddressLocation) {
     var user = 0;
     function userCount() {
         user++;
-        console.log("So far we have " + user + " from "  + ipAddressLocation + ".")
+        console.log("So far we have " + user + " from " + ipAddressLocation + ".")
     }
     return userCount
 }
@@ -117,3 +118,43 @@ DenverUsers = usersLocation("Denver")
 sanFranciscoUsers();
 sanFranciscoUsers();
 DenverUsers();
+
+
+// EXAMPLE OF CLOSURE
+function outerFunction() {
+    var someCount = 0;
+    function innerFunction() {
+        someCount++;
+        console.log("Called " + someCount + "times");
+    }
+    return innerFunction;
+}
+
+counter1 = outerFunction();
+counter2 = outerFunction();
+counter1(); // Called 1 times
+counter2(); // Called 1 times
+
+
+
+
+function outer() {
+    var count = 0;
+    function inner() {
+        count += 1;
+        if (count == 1) {
+            console.log("counted " + count + " time")
+        } else {
+            console.log("counted " + count + " times")
+        }
+    }
+    return inner;
+}
+
+
+Tyson = outer()
+console.log(Tyson())
+console.log(Tyson())
+console.log(Tyson())
+
+
