@@ -67,169 +67,183 @@ console.log(dev) // [ 'We', 'are', 'FullStack', 'Developer' ]
 var combine = ["H", "e", "l", "l", "o", " ", "A", "l", "e", "x", " ", "a", "n", "d", " ", "C", "h", "a", "r", "l", "i", "e"]
 console.log(combine.length) // (0-22 includes spaces as an index.) 22     
 
-8. delete arr[0]
-// will delete the item at the specified index of the array
+8. delete arr[0] // will delete the item at the specified index of the array
 
-var thisArray = ["The", "word", "ME", "will", "be", "deleted"]
-delete thisArray[2]
-console.log(thisArray) //[ 'The', 'word', undefined, 'will', 'be', 'deleted' ]
+    var thisArray = ["The", "word", "ME", "will", "be", "deleted"]
+    delete thisArray[2]
+    console.log(thisArray) //[ 'The', 'word', undefined, 'will', 'be', 'deleted' ]
 
 //## What is the difference between using the delete operator on the array element as opposed to using the Array.splice method?
 //delete will delete the object property, but will not reindex the array or update its length. This makes it appears as if it is undefined:
 
-myArray = ['a', 'b', 'c', 'd'] // ["a", "b", "c", "d"]
-delete myArray[0] // true
-console.log(myArray)//[undefined, "b", "c", "d"]
+    myArray = ['a', 'b', 'c', 'd'] // ["a", "b", "c", "d"]
+    delete myArray[0] // true
+    console.log(myArray)//[undefined, "b", "c", "d"]
 
-9. arr.splice(2, 0)
-//removes the items in the given indecies of the array
+9. arr.splice(2, 0) //removes the items in the given indecies of the array
 
 
 //Splice(start, deleteCount) actually removes the element from the array:
 
-myArray = ['a', 'b', 'c', 'd'] // ["a", "b", "c", "d"]
-myArray.splice(0, 2) // ["a", "b"]
-console.log(myArray) // ["c", "d"]
+    myArray = ['a', 'b', 'c', 'd'] // ["a", "b", "c", "d"]
+    myArray.splice(0, 2) // ["a", "b"]
+    console.log(myArray) // ["c", "d"]
 
 
-var thisArray = ["The", "word", "ME", "will", "be", "deleted"]
-thisArray.splice(2, 1)
-console.log(thisArray) //[ 'The', 'word', 'will', 'be', 'deleted' ] //ME was deleted
-
-
-
-10. arr.splice(2, 0, 'red', 'green')
-//will insert the corresponding strings into the given indecies of the array
-
-var thisArray = ["The", "word", "ME", "will", "be", "deleted"]
-thisArray.splice(1, 4, "code", "that", "was", "here", "was")
-console.log(thisArray) // [ 'The', 'code', 'that', 'was', 'here', 'was', 'deleted' ]
-
-11. arr.concat(arr2)
-//Joins two or more arrays, and returns a copy of the joined arrays
-
-var one = ["Hi", "my", "name", "is", "Tyson"]
-var two = ["Gerber", "nice", "to", "concat", "with", "you", "."]
-
-
-console.log(one.concat(two)) //[ 'Hi','my','name','is', 'Tyson', 'Gerber', 'nice', 'to', 'concat', 'with', 'you', '.' ]
-console.log(one.concat(two).join(' ')) //Hi my name is Tyson Gerber nice to concat with you .
-
-
-// console.log(letters.concat(numbers)) //[ 'number', 'number', 'number', 'number', 1, 2, 3, 4 ]
+    var thisArray = ["The", "word", "ME", "will", "be", "deleted"]
+    thisArray.splice(2, 1)
+    console.log(thisArray) //[ 'The', 'word', 'will', 'be', 'deleted' ] //ME was deleted
 
 
 
+10. arr.splice(2, 0, 'red', 'green') //will insert the corresponding strings into the given indecies of the array
+
+    var thisArray = ["The", "word", "ME", "will", "be", "deleted"]
+    thisArray.splice(1, 4, "code", "that", "was", "here", "was")
+    console.log(thisArray) // [ 'The', 'code', 'that', 'was', 'here', 'was', 'deleted' ]
+
+11. arr.concat(arr2) //Joins two or more arrays, and returns a copy of the joined arrays
+
+    var one = ["Hi", "my", "name", "is", "Tyson"]
+    var two = ["Gerber", "nice", "to", "concat", "with", "you", "."]
 
 
-numbers = [1, 2, 3, 4]
-for (var i = 0; i < numbers.length; i++) {
-  console.log(numbers[i] * 2)
-}
-
-12. newArr = oldArr.slice(3)
-//create a new array based on slice point of the old array
-var one = ["Hi", "my", "name", "is", "Tyson"]
-console.log(one.slice(4))
+    console.log(one.concat(two)) //[ 'Hi','my','name','is', 'Tyson', 'Gerber', 'nice', 'to', 'concat', 'with', 'you', '.' ]
+    console.log(one.concat(two).join(' ')) //Hi my name is Tyson Gerber nice to concat with you .
 
 
-13. arr.copyWithin()
-// Copies array elements within the array, to and from specified positions
-var one = ["Hi", "my", "name", "is", "Tyson"]
-console.log(one.copyWithin(1, 1))
-console.log(one.copyWithin(0,1))
-console.log(one.copyWithin(0,2))
+12. newArr = oldArr.slice(3) //create a new array based on slice point of the old array
+    var one = ["Hi", "my", "name", "is", "Tyson"]
+    console.log(one.slice(4)) // new array with the index you chose to pull out.
+      var one = ["Hi", "my", "name", "is", "Tyson"]
+    console.log(one.slice(2, 4))
+      var one = ["Hi", "my", "name", "is", "Tyson"]
+    console.log(one.slice(-3))
+         var one = ["Hi", "my", "name", "is", "Tyson"]
+    console.log(one.slice(1, -1))
+    var two = [1,2,3,4,5]
+    console.log(two.slice(1,-1))
 
-[1, 2, 3, 4, 5].copyWithin(0, 3);
-// [4, 5, 3, 4, 5]
+13. arr.copyWithin() // Copies array elements within the array, to and from specified positions
+      // Target: index at which the copied data will be placed.
+    var one = ["Hi", "my", "name", "is", "Tyson"]
+    console.log(one.copyWithin(3, 1))
+    var one = ["Hi", "my", "name", "is", "Tyson"]
+    console.log(one.copyWithin(0,1))
+    var one = ["Hi", "my", "name", "is", "Tyson"]
+    console.log(one.copyWithin(0,2))
 
-14. arr.every()
-// Checks if every element in an array pass a test
+    var two = [1,2,3,4,5]
+    console.log(two.copyWithin(2,0)) //1,2,1,2,5
+    var two = [1,2,3,4,5]
+    console.log(two.copyWithin(2,1)) //1,2,2,3,4
+    
+    var three = ["a","b", "c", "d", "e", "f", "g"]
+    console.log(three.copyWithin(5,3)) // a,b,c,d,e,d,e
+      var three = ["a","b", "c", "d", "e", "f", "g"]
+     console.log(three.copyWithin(5,3,4)) //a,b,c,d,e,d,g
 
-console.log([-10, 0, 10].every(x => x < 0)) //false
-console.log([-10, 0, 10].every(x => x < 0)) //false
-console.log([1, 2, 3, 4].every(x => x < 0))  //false
-console.log([1, 2, 3, 4].every(x => x >= 0))  //true
+    console.log(['alpha', 'bravo', 'charlie', 'delta'].copyWithin(3, 0)); //uses the length 1-3, insert at 0
+    console.log(['alpha', 'bravo', 'charlie', 'delta'].copyWithin(3, 2)); //uses the length 1-3, insert at 2
+    console.log(['alpha', 'bravo', 'charlie', 'delta'].copyWithin(2, 3)); //uses the length 1-2, insert at 3
 
-15. arr.fill()
-// Fill the elements in an array with a static value
-var one = ["Hi", "my", "name", "is", "Tyson"]
-console.log(one.fill(1))
-var one = ["Hi", "my", "name", "is", "Tyson"]
-console.log(one.fill(1, 1))
-var one = ["Hi", "my", "name", "is", "Tyson"]
-console.log(one.fill(0,1))
-var one = ["Hi", "my", "name", "is", "Tyson"]
-console.log(one.fill(0,2))
-var one = ["Hi", "my", "name", "is", "Tyson"]
-console.log(one.fill(0,3))
-var one = ["Hi", "my", "name", "is", "Tyson"]
-console.log(one.fill("Alex",4))
-var one = ["Hi", "my", "name", "is", "Tyson"]
-console.log(one.fill("Alex",2, 3))
+14. arr.every() // Checks if every element in an array pass a test
 
+    console.log([-10, 0, 10].every(x => x < 0)) //false
+    console.log([-10, 0, 10].every(x => x < 0)) //false
+    console.log([1, 2, 3, 4].every(x => x < 0))  //false
+    console.log([1, 2, 3, 4].every(x => x >= 0))  //true
 
-16. arr.filter()
-// Creates a new array with every element in an array that pass a test
+    var num = ["The", "best", "number", "is", "number", "one"]
+      console.log(num.every(x=> typeof x == "string"))
 
-var people = ["Tyson", "Charlie", "Alex", "Tom", "Sara", "Tom", "Paul"]
+    var numbers = [1, 2, 3, 4, 5]
+      console.log(numbers.every(x=> typeof x == "number"))
+      console.log(typeof numbers[5])
+      
+    
+  x = "string"
+      function x(){
+        if (x == typeof string){
+        console.log("string")
+      }else{
+        console.log("not a string")
+      }
+      console.log(x());
+ 
+15. arr.fill() // Fill the elements in an array with a static value
 
-function findName(names) {
-  if (names.length === 4) { // find all the names with the length of 4 and return the array with those names.
-    return names
-  }
-}
-console.log(people.filter(findName)) // Alex, Sara, Paul
-
-
-17. arr.find()
-// Returns the value of the first element in an array that pass a test
-
-var people = ["Tyson", "Charlie", "Alex", "Tom", "Sara", "Tom", "Paul"]
-
-function findName(names) {
-  if (names.length === 4) { // find the first name with the length of 4.
-    return names
-  }
-}
-console.log(people.find(findName)) // Alex
-
-
-18. arr.findIndex()
-// Returns the index of the first element in an array that pass a test
-
-var people = ["Tyson", "Charlie", "Alex", "Tom", "Travis", "Tom"]
-
-function findName(names) {
-  if (names === "Tom") {
-    return names
-  }
-}
-console.log(people.findIndex(findName)) // 3   [3] The array where the equation passes.
-
-
-console.log([6, -5, 8].findIndex(x => x < 0)) //1
-console.log([6, 5, 8].findIndex(x => x < 0)) // -1 If what your testing doesn't exist then it will return -1
-
+      //1. What you want to add 2. where you want to add it.
+    // var one = ["Hi", "my", "name", "is", "Tyson"]
+    // console.log(one.fill(1))
+    // var one = ["Hi", "my", "name", "is", "Tyson"]
+    // console.log(one.fill(1, 1))
+    // var one = ["Hi", "my", "name", "is", "Tyson"]
+    // console.log(one.fill(0,1))
+    // var one = ["Hi", "my", "name", "is", "Tyson"]
+    // console.log(one.fill(0,2))
+    // var one = ["Hi", "my", "name", "is", "Tyson"]
+    // console.log(one.fill(0,3))
+    var one = ["Hi", "my", "name", "is", "Tyson"]
+    console.log(one.fill("Alex",4))
+    var one = ["Hi", "my", "name", "is", "Tyson"]
+    console.log(one.fill("Alex",2))
 
 
+16. arr.filter() // Creates a new array with every element in an array that pass a test
 
-19. arr.lastIndexOf()
-// Search the array for an element, starting at the end, and returns its position
+    var people = ["Tyson", "Charlie", "Alex", "Tom", "Sara", "Tom", "Paul"]
 
-var another = ["Test", "One", "Two", "Three", "Test", "One", "Two", "Three",]
-console.log(another.lastIndexOf("One")); // 5  index[5]
+    function findName(names) {
+      if (names.length === 4) { // find all the names with the length of 4 and return the array with those names.
+        return names
+      }
+    }
+    console.log(people.filter(findName)) // Alex, Sara, Paul
 
 
-20. arr.forEach()
-// Calls a function for each array element
+17. arr.find() // Returns the value of the first element in an array that pass a test
 
-animals = ['tigers', 'lions', 'bears']
+    var people = ["Tyson", "Charlie", "Alex", "Tom", "Sara", "Tom", "Paul"]
 
-animals.forEach(function (element) {
-  element = element + ' I am scared'
-  console.log(element)
-})
+    function findName(names) {
+      if (names.length === 4) { // find the first name with the length of 4.
+        return names
+      }
+    }
+    console.log(people.find(findName)) // Alex
+
+
+18. arr.findIndex() // Returns the index of the first element in an array that pass a test
+
+    var people = ["Tyson", "Charlie", "Alex", "Tom", "Travis", "Tom"]
+
+    function findName(names) {
+      if (names === "Tom") {
+        return names
+      }
+    }
+    console.log(people.findIndex(findName)) // 3   [3] The array where the equation passes.
+
+
+    console.log([6, -5, 8].findIndex(x => x < 0)) //1
+    console.log([6, 5, 8].findIndex(x => x < 0)) // -1 If what your testing doesn't exist then it will return -1
+
+
+19. arr.lastIndexOf() // Search the array for an element, starting at the end, and returns its position
+
+    var another = ["Test", "One", "Two", "Three", "Test", "One", "Two", "Three",]
+    console.log(another.lastIndexOf("One")); // 5  index[5]
+
+
+20. arr.forEach() // Calls a function for each array element
+
+    animals = ['tigers', 'lions', 'bears']
+
+    animals.forEach(function (element) {
+      element = element + ' I am scared'
+      console.log(element)
+    })
 
 
 arr.indexOf()
@@ -272,6 +286,10 @@ arr.valueOf()
 // Returns the primitive value of an array
 
 
+numbers = [1, 2, 3, 4]
+for (var i = 0; i < numbers.length; i++) {
+  console.log(numbers[i] * 2)
+}
 
 
 
@@ -368,3 +386,24 @@ high preformance method to shift values in an array.
 target of where your going to be copying 
 
 1 - 2 go to two. 2 is exclusive so your only looking at car 
+
+
+
+function foo() {
+    console.log(this);
+}
+
+foo() // window
+new foo() // foo
+
+
+
+
+
+    myArray = ['a', 'b', 'c', 'd'] // ["a", "b", "c", "d"]
+    myArray.splice(1, 3) // ["a", "b"]
+    console.log(myArray)
+
+    var x = 123
+
+    var y = x
