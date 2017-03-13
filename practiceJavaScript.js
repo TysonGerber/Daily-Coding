@@ -72,3 +72,22 @@ function repeatify(name, num){
 }
 
   console.log(repeatify("hello", 3));
+
+
+
+function Car(brand, name, color, fuel, speed, year) {
+  this.name = name;
+  this.brand = brand;
+  this.color = color;
+  this.fuel = fuel;
+  this.speed = speed;
+  this.year = year;
+}
+
+fordFocus = new Car("Ford", "Focus", "Blue", "Regular Unleaded", "80 mph", 2002);
+
+Car.prototype.toString = function carToString() {
+  return " This is a " + this.color + " " + this.brand + " " + this.name + ". " + " It's reveal date was " + this.year + ", " + " it's max speed is " + this.speed + " and takes " + this.fuel + " fuel."
+}
+//console.log(fordFocus.toString()) //This is a Blue Ford Focus.  It's reveal date was 2002,  it's max speed is 80 mph and takes Regular Unleaded fuel.
+console.log(fordFocus + " ") // same
