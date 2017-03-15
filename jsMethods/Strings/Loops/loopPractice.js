@@ -10,7 +10,7 @@ for (var i = 0; i < 501; i += 100) {
   console.log(i)
 }
 
-for (var i = 1; i < 65; i *= 2) {
+for (var i = 2; i < 12; i *= 2) {
   console.log(i)
 }
 
@@ -261,57 +261,6 @@ for(var i = numbers.length; i >=0; i--){
 
 
 
-
-function SecondsToTime(seconds){
- var minutes = (seconds / 60)  // convert seconds into minutes
- var mLeftOver = ((minutes % 1).toFixed(2)) // left over time
- var convertLeftOverMinutes = mLeftOver * 60 // convert left over minutes into minutes
-var totalMinutes = Math.round(minutes + convertLeftOverMinutes) // adding minute and left over minutes.
-
-
-
- return   Math.floor(minutes) + " minutes " + convertLeftOverMinutes + " left over" + totalMinutes
-}
-console.log(SecondsToTime(7600));
-
-
-
-function SecondsToTime(seconds){
-    // var days = Math.floor(seconds / 24*60*60)
-    var days = 0
-    var hours = ((seconds-(days*60*60*24))/60*60) 
-    var minutes = ((seconds-(hours*60*60))/60) 
-
- return  days + " days " + hours + " hours and " 
-}
-console.log(SecondsToTime(3600));
-
-
- Math.round( number * 10 ) / 10;
-
- function SecondsToTime(seconds){
-  var minutes = (seconds / 60)
-  var hours = (minutes / 60)
-  var days = (hours / 24) 
-  // if (hours == 24){
-  //   console.log(1)
-  // }
-  var week = (days / 7)
- 
- return  days + " days " + hours + " hours and " + minutes + " minutes."
-}
-console.log(SecondsToTime(86400));
-
-function secondsToTime(seconds){
-
-for(var s = 0; s < seconds; s++){
-console.log(s)
-}
-return s + " seconds."
-}
-console.log(secondsToTime(60));
-
-
 function dayClock(seconds) {
   for (var d = 0; d < 31; d++) { // days
     for (var h = 0; h < 24; h++) {
@@ -329,26 +278,97 @@ console.log(dayClock(60))
 
 
 
-function tellTime(seconds){
-  minutes = (seconds / 60)
-  hours = (minutes / 60)
-return hours + "hours" + minutes + "minutes"
+// loop
+numbers = [1,2,3,4]
+
+ for(var i = 0; i < numbers.length; i++){
+   console.log(numbers[i] * 2)
+ }
+
+//function with loop 
+
+function timesTwo(numbers){
+newArr = [];
+  for(var i = 0; i <numbers.length; i++){
+    newArr.push(numbers[i] * 2)
+  }
+     return newArr
+}
+console.log(timesTwo([1,2,3,4]))
+
+
+
+
+
+
+// map function
+numbers = [1,2,3,4]
+
+var timesTwo = numbers.map(function(el){
+  return el * 2
+})
+
+console.log(timesTwo)
+
+
+numbers = [1,2,3,4,5,]
+
+var string = numbers.map(function(el){
+  return el  
+}).reverse().join(',')
+
+console.log(string)
+
+
+// reverse numbers
+numbers = [1,2,3,4,5,]
+
+var string = numbers.reverse().join(',')
+
+console.log(string)
+
+
+// reverse numbers with .map
+
+numbers = [1,2,3,4,5,]
+
+var string = numbers.map(function(el){
+ return el
+})
+
+console.log(string)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function fizzbuzz(numbers){
+  
+  for(var i = 0; i <= numbers; i++){
+    if (i % 3 === 0 && i % 5 === 0){
+      console.log(i + " fizz buzz")
+    }
+    else if(i % 3 === 0){
+      console.log(i + " fizz")
+    }else if (i % 5 === 0){
+      console.log(i + " buzz")
+
+    }else {
+      console.log(i)
+    }
+  }
 }
 
-console.log(tellTime(3660))
-
-
-
-function SecondsToTime(seconds){
-    // var days = Math.floor(seconds / 24*60*60)
-    var days = 0
-    var hours = ((seconds - (days/60/60/24))) 
-    var minutes = ((seconds-(hours*60*60))/60) 
-
- return  days + " days " + hours + " hours and " + minutes + "minutes" 
-}
-console.log(SecondsToTime(3600));
-
-
-
-
+console.log(fizzbuzz(100))
