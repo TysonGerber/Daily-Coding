@@ -267,7 +267,7 @@ function dayClock(seconds) {
       //console.log("hours" + h) // hours
       for (var m = 0; m < 60; m++) {
         //console.log("minute" + m)// minutes
-        for (var s = 0; s < seconds; s++) {
+        for (var s = 0; s < 60; s++) {
           //console.log('seconds' + s)   //seconds
         }
       }
