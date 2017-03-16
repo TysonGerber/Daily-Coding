@@ -132,6 +132,6 @@ console.log(newAnimals)
 var toUpper = ["Hi", "my", "name", "is", "Tyson"]
 
 var newer = toUpper.forEach(function(element){
-   
+ var upper = newer.toUpperCase()
+ 
 })
-console.log(newer)

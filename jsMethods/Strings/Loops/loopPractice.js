@@ -233,11 +233,11 @@ num % 1 != 0
 
 function twins(letters) {
 
-  for (var i = 0; i < letters.length-1; i += 2) {
+  for (var i = 0; i < letters.length - 1; i += 2) {
     if (letters[i] != letters[i + 1] || letters.length % 2 == 1) {
       return false
     }
-    
+
   }
   return true
 }
@@ -249,9 +249,9 @@ console.log(twins(['a', 'a', undefined]))
 console.log(twins(['a', 'a', undefined, undefined]))
 
 
-var numbers = [1,2,3,4,5,6,7,8,9,10]
+var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-for(var i = numbers.length; i >=0; i--){
+for (var i = numbers.length; i >= 0; i--) {
   console.log(i)
 }
 
@@ -272,29 +272,29 @@ function dayClock(seconds) {
         }
       }
     }
-  }return d + "days" + h + "hours" + s + "seconds" + m + "minutes"
+  } return d + "days" + h + "hours" + s + "seconds" + m + "minutes"
 }
 console.log(dayClock(60))
 
 
 
 // loop
-numbers = [1,2,3,4]
+numbers = [1, 2, 3, 4]
 
- for(var i = 0; i < numbers.length; i++){
-   console.log(numbers[i] * 2)
- }
+for (var i = 0; i < numbers.length; i++) {
+  console.log(numbers[i] * 2)
+}
 
 //function with loop 
 
-function timesTwo(numbers){
-newArr = [];
-  for(var i = 0; i <numbers.length; i++){
+function timesTwo(numbers) {
+  newArr = [];
+  for (var i = 0; i < numbers.length; i++) {
     newArr.push(numbers[i] * 2)
   }
-     return newArr
+  return newArr
 }
-console.log(timesTwo([1,2,3,4]))
+console.log(timesTwo([1, 2, 3, 4]))
 
 
 
@@ -302,26 +302,26 @@ console.log(timesTwo([1,2,3,4]))
 
 
 // map function
-numbers = [1,2,3,4]
+numbers = [1, 2, 3, 4]
 
-var timesTwo = numbers.map(function(el){
+var timesTwo = numbers.map(function (el) {
   return el * 2
 })
 
 console.log(timesTwo)
 
 
-numbers = [1,2,3,4,5,]
+numbers = [1, 2, 3, 4, 5,]
 
-var string = numbers.map(function(el){
-  return el  
+var string = numbers.map(function (el) {
+  return el
 }).reverse().join(',')
 
 console.log(string)
 
 
 // reverse numbers
-numbers = [1,2,3,4,5,]
+numbers = [1, 2, 3, 4, 5,]
 
 var string = numbers.reverse().join(',')
 
@@ -330,42 +330,46 @@ console.log(string)
 
 // reverse numbers with .map
 
-numbers = [1,2,3,4,5,]
+numbers = [1, 2, 3, 4, 5,]
 
-var string = numbers.map(function(el){
- return el
+var string = numbers.map(function (el) {
+  return el
 })
 
 console.log(string)
 
+// This is the correct answer
+function fizzbuzz(numbers) {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function fizzbuzz(numbers){
-  
-  for(var i = 0; i <= numbers; i++){
-    if (i % 3 === 0 && i % 5 === 0){
+  for (var i = 0; i <= numbers; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
       console.log(i + " fizz buzz")
     }
-    else if(i % 3 === 0){
+    else if (i % 3 === 0) {
       console.log(i + " fizz")
-    }else if (i % 5 === 0){
+    } else if (i % 5 === 0) {
       console.log(i + " buzz")
+    } else {
+      console.log(i)
+    }
+  }
+}
+console.log(fizzbuzz(100))
 
-    }else {
+
+
+
+// This is what I had.
+function fizzbuzz(numbers) {
+
+  for (var i = 0; i <= numbers; i++) {
+    if (i % 3 === 0) {
+      console.log(i + " fizz")
+    } else if (i % 5 === 0) {
+      console.log(i + " buzz")
+    } else if (i % 3 === 0 && i % 5 === 0) {
+      console.log(i + " fizz buzz")
+    } else {
       console.log(i)
     }
   }
