@@ -135,3 +135,12 @@ var newer = toUpper.forEach(function(element){
  var upper = newer.toUpperCase()
  
 })
+
+function x(a,b){
+var count = [];
+var c = a + b
+c.push(count)
+return count
+}
+
+console.log(x(3,4))
