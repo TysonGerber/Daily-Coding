@@ -76,3 +76,13 @@ return (weeks).toFixed(0) + " weeks " + (days).toFixed(0) + " days " + (hours).t
 }
 
 console.log(findTime(604875))
+
+
+
+
+
+//toFixed() example
+
+weeks = 1.3456778
+
+console.log(weeks.toFixed(2))
