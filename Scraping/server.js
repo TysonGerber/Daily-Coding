@@ -59,8 +59,11 @@ nightmare
         // pass data from the nightmare browser back to this express app
       //console.log(document.body.querySelectorAll("#results tr td")[0]).innerText
       console.log(document.body.querySelectorAll("#results tr td")[0].innerHTML)
-    
-      return document.body.querySelectorAll("#results tr td")[0].innerHTML
+
+      var name = document.body.querySelectorAll("#results tr td")[0].innerHTML
+      console.log(name)
+      //document.body.querySelectorAll("#results tr td")[0].innerHTML
+      return name
        //return document.body.querySelectorAll("#results tr")[1].innerHTML
       
     
