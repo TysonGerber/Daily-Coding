@@ -12,11 +12,15 @@ nightmare
         //.click('form[action*="ccn_search.php"] [value=I Agree]')
         .click('#main [value="I Agree"]')
         .wait('#search')
+        .wait(2000)
         .click('#search > form [title="CheckAll"]')
         .wait('#search')
+        .wait(2000)
         .click('#search > form > table > tbody > tr:nth-child(4) > td:nth-child(2) > input[type="submit"]')
           .wait('#search')
+          .wait(2000)
         .click('#search > form > table > tbody > tr:nth-child(2) > td:nth-child(3) > select')
+       
         //    for(var i = 0; i < .length-15; i++){
         //       .click('#search > form > table > tbody > tr:nth-child(4) > td:nth-child(2) > input[type="submit"]')
         //    }
@@ -53,7 +57,10 @@ nightmare
     .evaluate(function () {
     //    var info =[]
         // pass data from the nightmare browser back to this express app
-       console.log(document.body.querySelectorAll("#results tr")[1]).text()
+      //console.log(document.body.querySelectorAll("#results tr td")[0]).innerText
+      console.log(document.body.querySelectorAll("#results tr td")[0].innerHTML)
+    
+      return document.body.querySelectorAll("#results tr td")[0].innerHTML
        //return document.body.querySelectorAll("#results tr")[1].innerHTML
       
     
