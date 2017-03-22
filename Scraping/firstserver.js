@@ -5,32 +5,17 @@ var Nightmare = require('nightmare');
 var nightmare = Nightmare({ show: true });
 
 nightmare
-    .goto('https://store.aacc.net/ccn/ccn_disclaimer.php')
+    .goto('http://aacc.net')
     //.type()
-        // .click('#main > form:nth-child(5) > input')
+    .click('body > div.top-header-nav > ul > li:nth-child(6) > a')
+    .click('#single-page-left-inner-bg > div:nth-child(4) > a:nth-child(1) > img')
+    .wait('#main')
+        //.click('#main > form:nth-child(5) > input')
          //.type('form[action*="ccn_search.php"] [value=I Agree]')
         //.click('form[action*="ccn_search.php"] [value=I Agree]')
-        .click('#main [value="I Agree"]')
-        .wait('#search')
-        .click('#search > form [title="CheckAll"]')
-        .wait('#search')
-        .click('#search > form > table > tbody > tr:nth-child(4) > td:nth-child(2) > input[type="submit"]')
-          .wait('#search')
-        .click('#search > form > table > tbody > tr:nth-child(2) > td:nth-child(3) > select')
-        //    for(var i = 0; i < .length-15; i++){
-        //       .click('#search > form > table > tbody > tr:nth-child(4) > td:nth-child(2) > input[type="submit"]')
-        //    }
-          
-        //    .check('input [type=checkbox][value="IBC-BCPCC"]')
-        //    .check('input [type=checkbox][value="IBC-BCCC"]')
-        //    .check('input [type=checkbox][value="IBC-BCPC"]')
-        //    .check('input [type=checkbox][value="IBC-BCBC"]')
-        //    .wait('#main')
-
-
-
+        // .mousedown('.right')
         // .mouseup('.right')
-    
+    .click('#prehead > a:nth-child(1)')
         // .type('input[type=submit]')
         // .evaluate(function() {
         //   console.log(document.querySelector('input'));
@@ -47,21 +32,17 @@ nightmare
        // .type('input[value=I Agree]')
     //.click('submit')
 
-      
-    .wait('#results')
+        .wait('#main')
+
     // evaluate code IN THE NIGHTMARE BROWSER
     .evaluate(function () {
-    //    var info =[]
+
         // pass data from the nightmare browser back to this express app
-       console.log(document.body.querySelectorAll("#results tr")[1]).text()
-       //return document.body.querySelectorAll("#results tr")[1].innerHTML
-      
-    
-        
+        return document.querySelector('#main .right').value
     })
 
     // close the browser window
-    //.end()
+    .end()
     // the result passed into this function is the value we returned from evaluate
     .then(function (result) {
         console.log(result)

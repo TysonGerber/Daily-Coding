@@ -86,3 +86,4 @@ console.log(findTime(604875))
 weeks = 1.3456778
 
 console.log(weeks.toFixed(2))
+

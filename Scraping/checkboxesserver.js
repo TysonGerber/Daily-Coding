@@ -5,21 +5,16 @@ var Nightmare = require('nightmare');
 var nightmare = Nightmare({ show: true });
 
 nightmare
-    .goto('https://store.aacc.net/ccn/ccn_disclaimer.php')
+    .goto('http://www.ironspider.ca/forms/checkradio.htm')
     //.type()
         // .click('#main > form:nth-child(5) > input')
          //.type('form[action*="ccn_search.php"] [value=I Agree]')
         //.click('form[action*="ccn_search.php"] [value=I Agree]')
-        .click('#main [value="I Agree"]')
-        .wait('#search')
-        .click('#search > form [title="CheckAll"]')
-        .wait('#search')
-        .click('#search > form > table > tbody > tr:nth-child(4) > td:nth-child(2) > input[type="submit"]')
-          .wait('#search')
-        .click('#search > form > table > tbody > tr:nth-child(2) > td:nth-child(3) > select')
-        //    for(var i = 0; i < .length-15; i++){
-        //       .click('#search > form > table > tbody > tr:nth-child(4) > td:nth-child(2) > input[type="submit"]')
-        //    }
+         .check('#Content > div.CenterCol > blockquote:nth-child(17) > form > input[type="checkbox"]:nth-child(3)')
+          .check('#Content > div.CenterCol > blockquote:nth-child(17) > form > input[type="checkbox"]:nth-child(9)')
+           .check('#Content > div.CenterCol > blockquote:nth-child(33) > form > input[type="radio"]:nth-child(5)')
+         
+           .wait('#main')
           
         //    .check('input [type=checkbox][value="IBC-BCPCC"]')
         //    .check('input [type=checkbox][value="IBC-BCCC"]')
@@ -48,16 +43,12 @@ nightmare
     //.click('submit')
 
       
-    .wait('#results')
+
     // evaluate code IN THE NIGHTMARE BROWSER
     .evaluate(function () {
-    //    var info =[]
+
         // pass data from the nightmare browser back to this express app
-       console.log(document.body.querySelectorAll("#results tr")[1]).text()
-       //return document.body.querySelectorAll("#results tr")[1].innerHTML
-      
-    
-        
+        return document.querySelector('#main [value="I Agree"]').type
     })
 
     // close the browser window
