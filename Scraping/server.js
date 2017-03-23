@@ -61,7 +61,7 @@ nightmare
       console.log(document.body.querySelectorAll("#results tr td")[0].innerHTML)
 
       var name = document.body.querySelectorAll("#results tr td")[0].innerHTML
-      console.log(name)
+      console.log(name.match(/[a-z ]/gi))
       //document.body.querySelectorAll("#results tr td")[0].innerHTML
       return name
        //return document.body.querySelectorAll("#results tr")[1].innerHTML
