@@ -52,23 +52,28 @@ nightmare
     .wait('#results')
     // evaluate code IN THE NIGHTMARE BROWSER
     .evaluate(function () {
-        var info = []
+        var info = [];
 
         // This gets the Name of the client and degrees
-        info.push((document.body.querySelectorAll("#results tr td")[0].innerHTML))
-
+        var nameAndDegrees =  document.body.querySelectorAll("#results tr td")[0].innerHTML
+            info.push(nameAndDegrees)
         // Licenses
-        info.push((document.body.querySelectorAll("#results tr td")[1].innerHTML))
+        var license = document.body.querySelectorAll("#results tr td")[1].innerHTML
+            info.push(license);
 
         // Not sure what this is BCPPC
-        info.push((document.body.querySelectorAll("#results tr td")[2].innerHTML))
+        info.push((document.body.querySelectorAll("#results tr td")[2].innerHTML));
+
+          //State or Country
+        info.push((document.body.querySelectorAll("#results tr td")[3].innerHTML));
 
         // Email
-        info.push((document.body.querySelectorAll("#results tr td")[5].innerHTML))
+        info.push((document.body.querySelectorAll("#results tr td")[5].innerHTML));
 
-        //State or Country
-        info.push((document.body.querySelectorAll("#results tr td")[3].innerHTML))
+        //Address
+        info.push((document.body.querySelectorAll("#results tr td")[7].innerHTML));
 
+      
        
         // var name = (document.body.querySelectorAll("#results tr td")[0].innerHTML)
         // // var letters = name.match(/[a-z ]/gi)
