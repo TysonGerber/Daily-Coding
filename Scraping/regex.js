@@ -22,6 +22,13 @@ console.log(name[i])
 
 
 
+var equation = 'James Ramsey<br><i>M. A. Clin. Psych.  M. Div. Theo.</i><br><a href="./ccn_more_information.php?id=3257">More Info</a>'
+
+var name = equation.match("[^<br>]")
+// var name2 = name.match(/[a-z ]/gi)
+// console.log(name2)
+
+
 
 
 
