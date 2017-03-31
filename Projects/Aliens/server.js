@@ -1,30 +1,23 @@
-var express = require('express');
-
-//call express
+var express = require('express')
 var app = express();
 
-//port 
+app.use(express.static('./public'));
+
+app.get("/", (req,res)=>{
+    res.sendFile('index.html', {root:'./public/html'})
+})
+
 var PORT = process.env.PORT || 8080;
 
-app.use(express.static('./public'))
-
-
-//routes
-
-app.get('/', (req, res)=>{
-    res.sendFile('index.html', {root:"./public/html"})
-})
-
-
-//listen 
 app.listen(PORT, (err)=>{
-    if(err){
-        console.log("Failed to start server", err)
+    if (err){
+        console.log("Failed to start server:", err)
+    }else{
+        console.log("Server up and running on:", PORT)
     }
-    else{
-        console.log("Server is up and running on Port:", PORT)
-    }
-})
+}
+
+
 
 
 
