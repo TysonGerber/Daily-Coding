@@ -6,14 +6,14 @@ var equation = 'James Ramsey<br><i>M. A. Clin. Psych.  M. Div. Theo.</i><br><a h
 // var eliminate = name.match((/[a-z]*/gi))
 // var eliminate = name.replace(/[.*+?^${}()<|>[]\\]/g, '\\$&')
 var name = equation.split('')
-
+ console.log(name)
 for(var i = 0; i < name.length; i++){
     console.log(name[i])
-if(name[i] == "<"){
-   return " <front"
+if(name[i] === "<"){
+   return ""
 }
-if(name[i] == ">"){
-    return "back> "
+if(name[i] === ">"){
+    return ""
 }
 
 }
@@ -68,3 +68,27 @@ var stringVariable = 'America/Argentina/Buenos_Aires',
     text = stringVariable.substring(0, stringVariable.indexOf('/'));
 
     console.log(text)
+
+
+
+
+
+
+
+
+// *******************************************
+        //REGEX EXAMPLES and Tutorialhttps://regexone.com/
+// *******************************************
+  
+    //lesson #1
+        // Match 
+        var one =	'abcdefg'	
+        // Match	
+        var two = 'abcde'	
+        // Match	
+        var three = 'abc'
+
+        //*  [a-g]
+        one.match(abc)
+         two.match(abc)
+          three.match(abc)
