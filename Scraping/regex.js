@@ -51,18 +51,18 @@ var name = equation.replace(/(<([^>]+)>)/ig, " ");
 console.log(name)
 
 function deleteMI(MoreInfo) {
-   var DeleteMoreInfo = MoreInfo.split(" ")
-   console.log(DeleteMoreInfo)
-    for (var i = 0; i < DeleteMoreInfo.length; i++) {
-        if (DeleteMoreInfo[i] === "More") {
-             console.log(" ")
-        } else if (DeleteMoreInfo[i] === "Info") {
-             console.log(" ")
+   var MoreInfo = MoreInfo.split(" ")
+   console.log(MoreInfo)
+    for (var i = 0; i < MoreInfo.length; i++) {
+        if (MoreInfo[i] === "More") {
+             MoreInfo[i] = "";
+        } else if (MoreInfo[i] === "Info") {
+            MoreInfo[i] = "";
         } else {
-             DeleteMoreInfo[i]
+             MoreInfo[i]
         }
     }
-    return DeleteMoreInfo[i]
+    return MoreInfo[i]
 }
     console.log(deleteMI(name))
 
