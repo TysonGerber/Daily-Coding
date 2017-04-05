@@ -111,9 +111,16 @@ console.log(summyFace(165, [5, 2, 3, 60, 3, 4, 100]));
 function tripletSum(x, arr) {
 
 
-    for (var i = 0; i < arr.length - 2; i++) {
-
-        if (arr[i] + arr[i + 1] + arr[i + 2] === x) {
+    for (var i = 0; i < arr.length+2; i++) {
+          var k = i >= arr.length ? i % arr.length : i
+          console.log(k)
+          console.log("First", arr[k])
+          console.log("Second", arr[k+1])
+          console.log("Third", arr[k+2])
+          console.log(arr[k] + arr[k+1] + arr[k+2])
+           
+        if(arr[k] + arr[k + 1] + arr[k + 2] === x) {
+       
             return true;
         }
     }
@@ -121,18 +128,69 @@ function tripletSum(x, arr) {
     return false;
 }
 
-console.log(tripletSum(165, [5, 2, 3, 60, 3, 4, 100]));
+console.log(tripletSum(165, [5, 2, 3, 60, 100]));
+
+
+
+
+
+var testimonial = ['Rugby', 'Baseball', 'Cricket'];
+var numTestimonials = testimonial.length;
+var index = 0;
+
+setInterval(function() {
+    $('#testimonials p').text(testimonial[index]);        
+    index = (index + 1) % numTestimonials;
+}, 5000);
+
+
+
+
+
+
+
 
 function test(x, a) {
-    for (var j = 0; j < a.length; i++) {
-        for (var i = 0; i < a.length; i++) {
-            if(j[i] + a[i+1] + a[i+2] === x){
-                console.log(j[i] + a[i] + a[i+1] === x)
-                return true
-            }
+    for (var f = 0; f < a.length; f++) {
+        for (var j = 0; j < a.length; j++) {
+            for (var i = 0; i < a.length; i++) {
+                console.log("First", a[f])
+                console.log("Second", a[j+1])
+                console.log("Third", a[i+2])
+                console.log(a[f] + a[j+1] + a[i+2])
+               
+                if (a[f] + a[j + 1] + a[i + 2] === x) {
 
+                    return true
+                }
+
+            }
         }
     }
- return false
+    return false
 }
+ console.log(test(165, [5, 2, 60, 3, 100]));
+console.log(test(5, [2,3,1]));
+
+
+
+function test(x, arr) {
+
+    for (var i = arr.length % 1; i < arr.length+2; i++) {
+
+        var check = arr[i] + arr[i + 1] + arr[i + 2];
+        console.log("First", arr[i])
+          console.log("Second", arr[i+1])
+          console.log("Third", arr[i+2])
+          console.log(arr[i] + arr[i+1] + arr[i+2])
+        //console.log(check);
+        if (check === x) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
 console.log(test(165, [5, 2, 60, 3, 100]));
+console.log(test(5, [2,3,1]));
