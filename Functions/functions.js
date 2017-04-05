@@ -107,33 +107,6 @@ console.log(summyFace(165, [5, 2, 3, 60, 3, 4, 100]));
 
 
 
-
-function tripletSum(x, arr) {
-
-
-    for (var i = 0; i < arr.length+2; i++) {
-          var k = i >= arr.length ? i % arr.length : i
-          console.log(k)
-          console.log("First", arr[k])
-          console.log("Second", arr[k+1])
-          console.log("Third", arr[k+2])
-          console.log(arr[k] + arr[k+1] + arr[k+2])
-           
-        if(arr[k] + arr[k + 1] + arr[k + 2] === x) {
-       
-            return true;
-        }
-    }
-
-    return false;
-}
-
-console.log(tripletSum(165, [5, 2, 3, 60, 100]));
-
-
-
-
-
 var testimonial = ['Rugby', 'Baseball', 'Cricket'];
 var numTestimonials = testimonial.length;
 var index = 0;
@@ -193,4 +166,110 @@ function test(x, arr) {
 }
 
 console.log(test(165, [5, 2, 60, 3, 100]));
+console.log(test(5, [2,3,1]));
+
+
+
+
+
+
+//Not quite there
+function tripletSum(x, arr) {
+
+
+    for (var i = 0; i < arr.length+2; i++) {
+          var k = i >= arr.length ? i % arr.length : i
+          console.log(k)
+          console.log("First", arr[k])
+          console.log("Second", arr[k+1])
+          console.log("Third", arr[k+2])
+          console.log(arr[k] + arr[k+1] + arr[k+2])
+           
+        if(arr[k] + arr[k + 1] + arr[k + 2] === x) {
+       
+            return true;
+        }
+    }
+
+    return false;
+}
+
+console.log(tripletSum(165, [5, 2, 3, 60, 100]));
+
+
+
+
+
+//Not quite there
+function tripletSum(x, arr) {
+
+
+    for (var i = 0; i < arr.length+2; i++) {
+          var k = i >= arr.length ? i % arr.length : i
+           var j = i >= arr.length ? i % arr.length : i
+            var m = i >= arr.length ? i % arr.length : i
+          console.log(k)
+          console.log("First", arr[k])
+          console.log("Second", arr[j+1])
+          console.log("Third", arr[m+2])
+          console.log(arr[k] + arr[j+1] + arr[m+2])
+           
+        if(arr[k] + arr[j + 1] + arr[m + 2] === x) {
+       
+            return true;
+        }
+    }
+
+    return false;
+}
+
+console.log(tripletSum(165, [5, 2, 3, 60, 100]));
+
+
+
+
+
+
+
+function tripletSum(x, arr) {
+
+    for (var i = 0; i < arr.length; i++) {
+
+        if (arr[i] + arr[i + 1] + arr[i + 2] === x) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+console.log(tripletSum(165, [142, 712, 254, 869, 548, 645, 663, 758, 38, 860, 724, 742, 530, 779, 317, 36, 191, 843, 289, 107, 41, 943, 265, 649, 447, 806, 891, 730, 371, 351, 7, 102, 394, 549, 630, 624, 85, 955, 757, 841, 967, 377, 932, 309, 945, 440, 627, 324, 538, 539, 119, 83, 930, 542, 834, 116, 640, 659, 705, 931, 978, 307, 674, 387, 22, 746, 925, 73, 271, 830, 778, 574, 98, 513]));
+
+
+
+
+
+
+
+function test(x, a) {
+    console.log("======START=========")
+    for (var f = 0; f < a.length; f++) {
+        for (var j = 0; j < a.length-1; j++) {
+            for (var i = 0; i < a.length-2; i++) {
+                console.log("First", a[f])
+                console.log("Second", a[j+1])
+                console.log("Third", a[i+2])
+                console.log(a[f] + a[j+1] + a[i+2])
+               
+                if (a[f] + a[j+1] + a[i+2] === x) {
+
+                    return true
+                }
+
+            }
+        }
+    }
+    return false
+}
+ console.log(test(165, [1, 2, 3, 4, 5,]));
 console.log(test(5, [2,3,1]));
