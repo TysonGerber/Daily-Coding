@@ -273,3 +273,13 @@ function test(x, a) {
 }
  console.log(test(165, [1, 2, 3, 4, 5,]));
 console.log(test(5, [2,3,1]));
+
+
+
+
+var string = "Tania is awesome!"
+
+var arr = string.split(" ")
+// console.log(arr)
+console.log(arr.reverse("").toString())
+
