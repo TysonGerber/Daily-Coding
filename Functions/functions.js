@@ -283,3 +283,12 @@ var arr = string.split(" ")
 // console.log(arr)
 console.log(arr.reverse("").toString())
 
+
+
+function sayHello(name){
+  
+  return "Hello" + name + "it is nice to finally connect with you!";
+
+}
+
+console.log(sayHello("Bryce"));
