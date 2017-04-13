@@ -279,9 +279,20 @@ console.log(test(5, [2,3,1]));
 
 var string = "Tania is awesome!"
 
-var arr = string.split(" ")
+var arr = string.split(",")
 // console.log(arr)
-console.log(arr.reverse("").toString())
+var yep = arr.reverse(",").toString(" ")
+console.log(yep)
+
+
+function Reverse(string){
+
+var revString = string.split(",").reverse().replace(/,/g, " ").toString()
+
+return revString
+}
+
+console.log(Reverse("he,llo"))
 
 
 
@@ -292,3 +303,4 @@ function sayHello(name){
 }
 
 console.log(sayHello("Bryce"));
+
