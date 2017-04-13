@@ -276,20 +276,21 @@ console.log(test(5, [2,3,1]));
 
 
 
+function Reverse(string){
+// var string = "Tania is awesome!"
 
-var string = "Tania is awesome!"
+var arr = string.split(" ").reverse().toString()
 
-var arr = string.split(",")
-// console.log(arr)
-var yep = arr.reverse(",").toString(" ")
-console.log(yep)
-
+ var arr2 = arr.replace(/,/g, " ")
+return arr2
+}
+console.log(Reverse("Tania is awesome!"))
 
 function Reverse(string){
 
-var revString = string.split(",").reverse().replace(/,/g, " ").toString()
-
-return revString
+var revString = string.split(",").reverse().toString()
+var revString2 = revString.replace(/,/g, " ")
+return revString2
 }
 
 console.log(Reverse("he,llo"))
