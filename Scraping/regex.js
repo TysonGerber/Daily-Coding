@@ -152,32 +152,6 @@ console.log(str);
 
 
 
-    var equation = 'James Ramsey<br><i>M. A. Clin. Psych.  M. Div. Theo.</i><br><a href="./ccn_more_information.php?id=3257">More Info</a>'
-
-    // var name2 = name.match(/[a-z ]/gi)
-    // console.log(name2)
-
-    // var eliminate = name.match((/[a-z]*/gi))
-    // var eliminate = name.replace(/[.*+?^${}()<|>[]\\]/g, '\\$&')
-    var name = equation.split('')
-
-    for (var i = 0; i < name.length; i++) {
-        // console.log(name[i])
-        if (name[i] === "<") {
-            return " "
-        }
-        if (name[i] === ">") {
-            return " "
-        }
-
-    }
-    //console.log(eliminate)
-    console.log(name[i])
-
-
-
-
-
 
   var temp = new String('This is a te!!!!st <br>ring... So??? Wh<br>at...');
     console.log(temp + '<br>');
@@ -188,7 +162,7 @@ console.log(str);
 
 
 
-      var equation = 'James Ramsey<br><i>M. A. Clin. Psych.  M. Div. Theo.</i><br><a href="./ccn_more_information.php?id=3257">More Info</a>'
+      var equation = 'Tyson Last<br><i>M. A. Clin. Psych.  M. Div. Theo.</i><br><a href="./ccn_more_information.php?id=3257">More Info</a>'
 
     // var name2 = name.match(/[a-z ]/gi)
     // console.log(name2)

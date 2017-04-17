@@ -145,3 +145,22 @@ return count
 
 console.log(x(3,4))
 
+
+var numbers = [1,2,3,4,5,6,7,8,9,10]
+
+var reverse = numbers.reverse()
+console.log(numbers)
+
+
+var numbers = [1,2,3,4,5,6,7,8,9,10]
+
+var numRev = [];
+
+function Hello(num){
+    for(var i = num.length-1; i >= 0; i--){
+      numRev.push(num[i])
+  }
+   
+    return numRev
+}
+console.log(Hello(numbers))
