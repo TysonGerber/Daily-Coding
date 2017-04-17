@@ -305,3 +305,43 @@ function sayHello(name){
 
 console.log(sayHello("Bryce"));
 
+
+    for(var g = 0; g <= 0; g++){
+        console.log("x")
+        for(var f = 0; f<= 0; f++){
+            console.log("xx")
+            for(var k = 0; k<=0; k++){
+                console.log("xxx")
+                for(var j = 0; j <=0; j++){
+                    console.log("xxxx")
+                    for(var i = 0; i <=0; i++){
+                        console.log("xxxxx")
+                    }
+                }
+            }
+        }
+    }
+
+
+
+ var k = i >= arr.length ? i % arr.length : i
+
+ arr.length
+
+var pyramid = []
+
+loop = 5
+function thePyramid(x){
+
+    for(var j = 0; j < 1; j++){
+        pyramid.push("J", x)
+        console.log(loop)
+        for(var i = 0; i < loop.length; i--){
+        pyramid.push("K", x)
+        loop = -1
+        
+        }
+    }
+    return pyramid
+}
+console.log(thePyramid("x"))
