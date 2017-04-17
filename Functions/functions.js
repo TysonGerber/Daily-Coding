@@ -328,19 +328,78 @@ console.log(sayHello("Bryce"));
 
  arr.length
 
+
+
 var pyramid = []
 
-loop = 5
+function thePyramid(x){
+var happy = 5
+    for(var j = 5; j > 0; j--){
+        pyramid.push("BREAK")
+       happy -= 1
+            for(var i = happy; i >= 0; i--){
+            pyramid.push(x)
+             
+            }
+    }
+    return pyramid
+}
+console.log(thePyramid("x"))
+
+
+
+
+
+var pyramid = []
+
 function thePyramid(x){
 
-    for(var j = 0; j < 1; j++){
-        pyramid.push("J", x)
-        console.log(loop)
-        for(var i = 0; i < loop.length; i--){
-        pyramid.push("K", x)
-        loop = -1
-        
+    for(var j = 4; j > 0; j--){
+        console.log("Break", j)
+        for(var i = 5; i > 0; i--){
+        pyramid.push(x)
+
         }
+            
+    return pyramid
+    }
+}
+console.log(thePyramid("x"))
+
+
+var pyramid = []
+function thePyramid(x){  
+        for(var i = 5; i > 0; i--){
+        pyramid.push(x)
+        }         
+    return pyramid
+    }
+console.log(thePyramid("x"))
+
+
+
+
+
+
+
+
+
+
+
+
+
+var pyramid = []
+
+function thePyramid(x){
+var happy = 0
+    for(var j = 5; j > 0; j--){
+        pyramid.push("BREAK")
+           happy += 1
+       console.log(happy)
+            for(var i = happy; i <= 0; i++){
+            pyramid.push(x)
+                 
+            }
     }
     return pyramid
 }
