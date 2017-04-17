@@ -164,3 +164,20 @@ function Hello(num){
     return numRev
 }
 console.log(Hello(numbers))
+
+
+
+
+
+var numbers = [1,2,3,4,5,6,7,8,9,10]
+var skip2 = 2
+var numRev = [];
+
+function Hello(num){
+    for(var i = num.length - skip2; i >= 0; i--){
+      numRev.push(num[i])
+  }
+   
+    return numRev
+}
+console.log(Hello(numbers))
