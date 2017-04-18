@@ -181,3 +181,62 @@ function Hello(num){
     return numRev
 }
 console.log(Hello(numbers))
+
+
+
+
+// Pyramid Exercise EXAMPLE ONE:
+
+    for(var g = 0; g <= 0; g++){
+        console.log("x")
+        for(var f = 0; f<= 0; f++){
+            console.log("xx")
+            for(var k = 0; k<=0; k++){
+                console.log("xxx")
+                for(var j = 0; j <=0; j++){
+                    console.log("xxxx")
+                    for(var i = 0; i <=0; i++){
+                        console.log("xxxxx")
+                    }
+                }
+            }
+        }
+    }
+
+
+// Pyramid Exercise EXAMPLE TWO:
+
+var pyramid = []
+function thePyramid(x){
+var happy = 0
+    for(var j = 5; j > 0; j--){
+        pyramid.push(" ")
+        happy += 1
+            for(var i = happy; i > 0; i--){
+            pyramid.push(x)   
+            }
+    }
+    return pyramid
+}
+console.log(thePyramid("x"))
+
+
+
+// var pyramid = []
+
+// function thePyramid(x){
+// var happy = 5
+//     for(var j = 5; j > 0; j--){
+//         pyramid.push("BREAK")
+//        happy -= 1
+//             for(var i = happy; i >= 0; i--){
+//             pyramid.push(x)
+             
+//             }
+//     }
+//     return pyramid
+// }
+// console.log(thePyramid("x"))
+
+
+

@@ -306,101 +306,17 @@ function sayHello(name){
 console.log(sayHello("Bryce"));
 
 
-    for(var g = 0; g <= 0; g++){
-        console.log("x")
-        for(var f = 0; f<= 0; f++){
-            console.log("xx")
-            for(var k = 0; k<=0; k++){
-                console.log("xxx")
-                for(var j = 0; j <=0; j++){
-                    console.log("xxxx")
-                    for(var i = 0; i <=0; i++){
-                        console.log("xxxxx")
-                    }
-                }
-            }
-        }
-    }
 
 
+var numbers = [1,2,3,4,5,6,7,8,9,10]
+var skip2 = 2
+var numRev = [];
 
- var k = i >= arr.length ? i % arr.length : i
-
- arr.length
-
-
-
-var pyramid = []
-
-function thePyramid(x){
-var happy = 5
-    for(var j = 5; j > 0; j--){
-        pyramid.push("BREAK")
-       happy -= 1
-            for(var i = happy; i >= 0; i--){
-            pyramid.push(x)
-             
-            }
-    }
-    return pyramid
+function Hello(num){
+    for(var i = num.length - skip2; i >= 0; i--){
+      numRev.push(num[i])
+  }
+   
+    return numRev
 }
-console.log(thePyramid("x"))
-
-
-
-
-
-var pyramid = []
-
-function thePyramid(x){
-
-    for(var j = 4; j > 0; j--){
-        console.log("Break", j)
-        for(var i = 5; i > 0; i--){
-        pyramid.push(x)
-
-        }
-            
-    return pyramid
-    }
-}
-console.log(thePyramid("x"))
-
-
-var pyramid = []
-function thePyramid(x){  
-        for(var i = 5; i > 0; i--){
-        pyramid.push(x)
-        }         
-    return pyramid
-    }
-console.log(thePyramid("x"))
-
-
-
-
-
-
-
-
-
-
-
-
-
-var pyramid = []
-
-function thePyramid(x){
-var happy = 0
-    for(var j = 5; j > 0; j--){
-        pyramid.push("BREAK")
-           happy += 1
-       console.log(happy)
-            for(var i = happy; i <= 0; i++){
-            pyramid.push(x)
-                 
-            }
-    }
-    return pyramid
-}
-console.log(thePyramid("x"))
+console.log(Hello(numbers))
