@@ -221,7 +221,6 @@ var happy = 0
 console.log(thePyramid("x"))
 
 
-
 // var pyramid = []
 
 // function thePyramid(x){
@@ -238,5 +237,17 @@ console.log(thePyramid("x"))
 // }
 // console.log(thePyramid("x"))
 
+
+// Pyramid Exercise EXAMPLE THREE FROM JEFF:
+
+for (var i = 1; i <= 5; i++) {
+    console.log(''.padEnd(i,'x'));
+}
+
+var msg = '';
+for (var i = 1; i <= 5; i++) {
+    msg += 'x';
+    console.log(msg);
+}
 
 
