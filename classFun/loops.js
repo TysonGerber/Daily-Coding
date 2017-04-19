@@ -250,4 +250,10 @@ for (var i = 1; i <= 5; i++) {
     console.log(msg);
 }
 
+var msg = [];
+for(var i = 1; i <=5; i++){
+    msg.push("x");
+    console.log(msg)
+}
+
 
