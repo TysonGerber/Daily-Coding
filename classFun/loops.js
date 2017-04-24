@@ -286,20 +286,26 @@ for (var i = check.length; i > 0; i--) {
 
 
 function findLength(string) {
+    var lastWord = [];
     var check = string.toUpperCase().split("")
-    var lastWord = []
+    
     for (var i = check.length; i > 0; i--) {
           
         if (check[i] == " ") {
-
-            return " ";
+            return  " ";
         }
         else {
             lastWord.push(check[i])
+           
         }
-    }
-    console.log(lastWord)
+    } console.log(lastWord)
 }
 
 console.log(findLength("Hello World"))
 
+
+
+function Hello(x){
+    console.log(" " + x)
+}
+console.log(Hello("Hi"))
