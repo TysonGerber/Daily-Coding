@@ -8,59 +8,34 @@
 
 <body>
 
+    <div id="root">
+        <input id="input" type="text" id="input" v-model="newName" >
 
+        <!--v-on:click and @click are equivalents to each other!-->
+        <button id="button" @click="addName">Add Name</button>
 
-</script>
+        <ul>
+            <li v-for="name in names" v-text="name">{{name}}</li>
+        </ul>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div id="root">
-    <input type="text" id="input" v-model="message">
-    <button id="button" ></button>
-
-    <p>The value of the input is {{message}}</p>
     </div>
 
     <script>
-    new Vue({
-        el: "#root",
-        data:{
-            message: "Hello Tyson"
-        }
-        methods:{
-            addName(){
+        new Vue({
+            el: "#root",
+            data: {
+                newName: "",
+                names: ["Tyson", "Steve", "Martin", "Cassandra"]
+            },
 
-            }
-        }
-    })
+            methods: {
+                addName() {
+                    this.names.push(this.newName);
+                    this.newName= '';
+                }
+            },
+
+        })
     </script>
 
 
@@ -76,7 +51,7 @@
 
 
 
-<!--<div id="root">
+    <!--<div id="root">
 
     <input type="text" id="input" v-model="message">
 </div>
