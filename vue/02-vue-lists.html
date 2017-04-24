@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.6/vue.js"></script>
+</head>
+
+<body>
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="root">
+    <input type="text" id="input" v-model="message">
+    <button id="button" ></button>
+
+    <p>The value of the input is {{message}}</p>
+    </div>
+
+    <script>
+    new Vue({
+        el: "#root",
+        data:{
+            message: "Hello Tyson"
+        }
+        methods:{
+            addName(){
+
+            }
+        }
+    })
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<div id="root">
+
+    <input type="text" id="input" v-model="message">
+</div>
+
+<script>
+new Vue({
+    el: "#root",
+    data: {
+        message: "Hello I remembered"
+    },
+});-->
+
+
+
+
+
+    <!--<div id="root">
+
+
+        <ul>
+            <li v-for="name in names" v-text="name">{{name}}</li>
+        </ul>
+
+        <input id="input" type="text" v-model="newName">
+        <button v-on:click="addName">Add Name</button>
+    </div>
+
+    <script>
+        var app = new Vue({
+            el: "#root",
+            data: {
+                newName: "",
+                names: ["Tyson", "Joe", "Steven", "Mary"]
+            },
+
+            methods: {
+                addName(){
+                    this.names.push(this.newName);
+                }
+            },
+
+            mounted() {
+                document.querySelector("#button").addEventListener("click", () => {
+                    let name = document.querySelector("#input");
+
+
+                    app.names.push(name.value);
+
+                    name.value = "";
+                });
+            }
+        });
+    </script>-->
+
+
+</body>
+
+</html>
