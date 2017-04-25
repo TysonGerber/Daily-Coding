@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+
+    </title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.6/vue.js"></script>
+    <style type="text/css">
+        .color-red {
+            color: red;
+        }
+        
+        .color-blue {
+            color: blue;
+        }
+        
+        .is-loading {
+            background: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root">
+        <input type="text" v-model="newName">
+        <button @click="addNew" :title="title">add name</button>
+        <button :title="hover">Hover Over Me</button>
+        <button @click="toggleClass" :class="{'is-loading': isLoading}">Toggle Me</button>
+        <h1 :class="className"> This is my H1</h1>
+
+        <ul>
+            <li v-for="name in names" v-text="name">{{names}}</li>
+        </ul>
+    </div>
+    <script>
+        var app = new Vue({
+            el: "#root",
+            data: {
+                newName: "",
+                title: "This is my title",
+                hover: "This is the message you see when you hover over my button",
+                names: ["Tyson", "Martha", "Joe", "Henry"],
+                className: "color-red",
+                isLoading: false,
+            },
+            methods: {
+                addNew() {
+                    this.names.push(this.newName)
+                },
+           
+                toggleClass() {
+                    this.isLoading = true;
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+
+    </title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.6/vue.js"></script>
+    <style type="text/css">
+        .color-red {
+            color: red;
+        }
+        
+        .color-blue {
+            color: blue;
+        }
+        
+        .is-loading {
+            background: red;
+        }
+        
+        .is-disabled {
+            background: purple;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="root">
+
+        <button :class="{'is-loading' : isLoading}" @click="toggleON">Toggle On</button>
+        <button :class="{'is-disabled': isDisabled}" @click="toggleOff">Toggle Off</button>
+        <input v-model="agree" type="checkbox"> Agree to this
+        <button v-attr="disabled: !agree">Submit</button>
+        <h1>Hello</h1>
+    </div>
+
+    <script>
+        var app = new Vue({
+            el: "#root",
+            data: {
+                isLoading: false,
+                isDisabled: false,
+                agree: false,
+            },
+            methods: {
+                toggleOn() {
+                    this.isLoading = true;
+                },
+                toggleOff() {
+                    this.isDisabled = true;
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
