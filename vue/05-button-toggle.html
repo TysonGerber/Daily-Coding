@@ -16,42 +16,36 @@
         }
         
         .is-loading {
-            background: red;
-        }
-        
-        .is-disabled {
-            background: purple;
+            background: green;
         }
     </style>
 </head>
 
 <body>
-
     <div id="root">
-
-        <button :class="{'is-loading' : isLoading}" @click="toggleON">Toggle On</button>
-        <button :class="{'is-disabled': isDisabled}" @click="toggleOff">Toggle Off</button>
-        <input v-model="agree" type="checkbox"> Agree to this
-        <button v-attr="disabled: !agree">Submit</button>
-        <h1>Hello</h1>
-    </div>
+    
+        <button @click="toggleClass" :class="{'is-loading': isLoading}">Toggle Me</button>
+        <button @click="On: !On" :class="{'is-title': isTitle}">Show Title</button>
+     </div>
 
     <script>
         var app = new Vue({
             el: "#root",
             data: {
                 isLoading: false,
-                isDisabled: false,
-                agree: false,
+                On: false,
+                isTitle: "Hello this is my title"
             },
-            methods: {
-                toggleOn() {
+            methods:{
+                toggleClass(){
                     this.isLoading = true;
                 },
-                toggleOff() {
-                    this.isDisabled = true;
+                On(){
+                this.isTitle;
+                On = true;
                 }
             }
+               
         })
     </script>
 </body>

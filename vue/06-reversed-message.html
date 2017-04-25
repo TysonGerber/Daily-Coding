@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+
+    </title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.6/vue.js"></script>
+    <style type="text/css">
+
+    </style>
+</head>
+
+<body>
+    <div id="root">
+        <h1>All Tasks</h1>
+        <ul>
+            <li v-for="task in tasks" v-text="task.description"></li>
+        </ul>
+
+        <h2>incomplete Tasks</h2>
+        <ul>
+            <li v-for="task in incompleteTasks" v-text="task.description"></li>
+        </ul>
+
+        <input type="text" v-model="newName">
+    </div>
+    <script>
+        var app = new Vue({
+            el: "#root",
+            data: {
+                newName: '',
+                tasks: [
+                    { description: "Go to the store", completed: true },
+                    { description: "Finish Vue Exercises", completed: false },
+                    { description: "Work on SaaS stuff", completed: false },
+                    { description: "Work on WordPress if I have time", completed: true },
+                    { description: "Watch Jazz Game", completed: false },
+                    { description: "Work on WordPress if I have time", completed: false },
+                ],
+            },
+            computed: {
+                incompleteTasks(){
+                    return this.tasks.filter(tasks => ! task.completed);
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
