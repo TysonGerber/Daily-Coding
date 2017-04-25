@@ -21,17 +21,34 @@ console.log(findIntern("Tyson Gerber"));
 // return -321
 
 // Return 0 if the result overflows and does not fit in a 32 bit signed integer.
-let x = 123
+
 
 function backwards(x) {
     var rev = x.toString().split("")
     var backwards = [];
     console.log(rev)
-    for (var i = rev.length-1; i >= 0 ; i--) {
-     backwards.push(rev[i])
-     
+    for (var i = rev.length - 1; i >= 0; i--) {
+        backwards.push(rev[i])
+        var string = backwards.join("")
     }
-    return backwards
+    return string
 }
 
-console.log(backwards(x))
+console.log(backwards(123))
+console.log(backwards(-123))
+
+
+
+//loop through
+
+function change(loop) {
+    var final = '';
+        for (var i = 0; i < loop.length; i++) {
+            
+            final.push(loop)
+            return final
+        }
+    }
+
+
+console.log(change([1, 2, 3]))
