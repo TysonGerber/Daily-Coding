@@ -41,14 +41,44 @@ console.log(backwards(-123))
 
 //loop through
 
+
+
+
+
+
+
 function change(loop) {
-    var final = '';
+    var finali = [];
+    
+     for (var j = 0; j < loop.length; j++) {
+ finali.push("j",loop[j])
         for (var i = 0; i < loop.length; i++) {
             
-            final.push(loop)
-            return final
+            finali.push("i",loop[i+1])
+           
         }
+    }
+     return finali
+}
+
+
+console.log(change([1,2,3]))
+
+
+
+
+
+
+
+function change(loop) {
+    var final = [];
+        for (var i = 0; i < loop.length; i++) {
+            console.log(loop[i])
+            final.push(loop[i])
+          
+        }
+          return final
     }
 
 
-console.log(change([1, 2, 3]))
+console.log(change([1,2,3]))
