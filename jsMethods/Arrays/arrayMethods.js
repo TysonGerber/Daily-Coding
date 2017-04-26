@@ -279,6 +279,10 @@ function x() {
   arr.sort()
   // Sorts the elements of an array
 
+
+names = ["Tyson", "Charles", "Joe", "Chris", "Matt", "Mike","Henry"]
+console.log(names.sort())
+
   arr.splice()
   // Adds/Removes elements from an array
 
