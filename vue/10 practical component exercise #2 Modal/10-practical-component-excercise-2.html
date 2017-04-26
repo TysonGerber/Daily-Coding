@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+
+    </title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.6/vue.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.1/css/bulma.css" />
+
+
+    <style type="text/css">
+        body {
+            padding-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root" class="container">
+
+        <button @click="showModal = true">Show Modal</button>
+      <modal  v-if="showModal" @close="showModal = false">
+           <p>
+                        Bacon ipsum dolor amet ham hock pork chop porchetta bacon brisket picanha leberkas shank ground round meatloaf sirloin tri-tip.
+                        Turducken capicola meatball, turkey flank pig pancetta sirloin short loin ribeye picanha landjaeger.
+                        Pork hamburger sausage prosciutto turducken burgdoggen biltong frankfurter filet mignon meatball
+                        ball tip. Bresaola cupim venison bacon cow. Strip steak fatback flank swine pork loin tongue ribeye
+                        burgdoggen shoulder doner sausage. Bacon picanha tri-tip ham pork loin ribeye shankle frankfurter
+                        swine tongue.
+
+                    </p>
+      </modal>
+
+        <message title="Hello World" body="Lorem ipsum dolar sit amet"></message>
+        <message title="Hello Universe" body="Lorem ipsum dolar sit amet"></message>
+        <message title="Hello Voltage" body="Lorem ipsum dolar sit amet"></message>
+
+        <article class="message">
+
+
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
