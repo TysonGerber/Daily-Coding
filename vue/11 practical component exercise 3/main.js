@@ -52,11 +52,11 @@ Vue.component("tab", {
         }
     },
     mounted(){
-        this.isActive = tbis.selected;
+        this.isActive = this.selected;
     },
     computed: {
         href() {
-            return "Hello";
+            return "#" + this.name.toLowerCase().replace(/ /g, '-');
         }
     },
 });
