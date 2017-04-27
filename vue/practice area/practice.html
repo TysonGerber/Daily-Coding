@@ -9,8 +9,10 @@
 <body>
         <div id="root">
 
+            <modal></modal>
+
     <h1>{{message}}</h1>
-    <input v-model="inputMessage" @click="clearMessage">
+    <input id="removeMessage" v-model="inputMessage" @click="clearMessage">
     <script src="main.js"></script>
     </div>
 </body>

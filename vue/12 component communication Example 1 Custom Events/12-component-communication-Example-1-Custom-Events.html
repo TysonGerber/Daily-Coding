@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
 
 <head>
@@ -7,14 +8,16 @@
     </title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.6/vue.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.1/css/bulma.css" />
-
 </head>
 
 <body>
     <div id="root" class="container">
+        {{ title }}
+        <coupon @applied="onCouponApplied"></coupon>
+
+        <h1 v-if="couponApplied">You used a coupon!</h1>
+
     </div>
-
-
     <script src="main.js"></script>
 </body>
 

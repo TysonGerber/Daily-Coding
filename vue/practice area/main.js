@@ -1,3 +1,14 @@
+Vue.component("modal",{
+   template: `
+   <div>
+        <div class="modal is-active">
+
+        </div>
+
+   </div>
+   `
+})
+
 new Vue({
     el: "#root",
 
@@ -8,7 +19,8 @@ new Vue({
 
     methods: {
         clearMessage(){
-            this.clearMessage = '';
+            this.clearMessage.$remove(id)
         }
     }
 })
+
